@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var books = require('./routes/books');
 var authors = require('./routes/authors');
+var knex = require('./db/knex');
 
 var app = express();
 

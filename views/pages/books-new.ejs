@@ -7,9 +7,19 @@
   	<% include ./../partials/header.ejs %>
   	<% include ./../partials/sidebar.ejs %>
   	<div class="main"> 
-  		<form method="POST" action="./new">
-  			<label></label>
-  		</form>
+  		<div class="insert-form">
+        <form method="POST" action="./new">
+    			<label> Title: </label><br>
+          <input type="text" name="title" required> <br>
+          <label> Genre: </label><br>
+          <input type="text" name="genre" required> <br>
+          <label> Cover Image Url: </label><br>
+          <input type="text" name="cover_url" > <br>
+          <label> Description</label><br>
+          <input type="text" name="description"> <br>
+          <input type="submit" class="submit" value="Add New Book">
+    		</form>
+      </div>
   	</div>
   </body>
 </html>

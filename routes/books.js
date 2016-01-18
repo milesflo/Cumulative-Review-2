@@ -1,17 +1,29 @@
 var express = require('express');
 var router = express.Router();
+var knex = require('../db/knex');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('./pages/books', {active: "books"});
+	knex('books').then(function(books){
+		res.render('./pages/books', {active: "books", books: books});
+	});
 });
 
 router.get('/new', function(req, res, next) {
-	res.render('./pages/books-new');
+	res.render('./pages/books-new', {active: "books"});
 });
 
 router.post('/new', function(req, res, next) {
-	res.send("recieved post request");
+	knex('books').then(function(books){
+		res.send("recieved post request", {active: "books", books: books});
+	});
 });
+
+router.get('/:id', function(req, res, next) {
+	knex('books').then(function(books){
+		res.render('./pages/book', {active: "books", books: books, id: req.params.id});
+	});
+});
+
 
 module.exports = router;

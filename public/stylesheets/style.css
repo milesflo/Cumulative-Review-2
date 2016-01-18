@@ -18,16 +18,18 @@ body {
 	text-align: center;
 	padding-top: 20%;
 	height: 100%;
-	width: 49%;
+	width: 49.6%;
 	display: inline-block;
+	border: 1px solid black;
 }
 
 #right {
 	text-align: center;
 	padding-top: 20%;
 	height: 100%;
-	width: 49%;
+	width: 49.6%;
 	display: inline-block;
+	border: 1px solid black;
 }
 
 h5 {
@@ -55,13 +57,13 @@ header > h3 {
 	display: inline-block;
 }
 
-.books > img {
+.sidebar > a > .books > img {
 	display: inline-block;
 	height: 80px;
 	width: 80px;
 }
 
-.authors > img {
+.sidebar > a > .authors > img {
 	display: inline-block;
 	height: 80px;
 	width: 80px;
@@ -90,7 +92,46 @@ header > h3 {
 }
 
 .active {
-	background-color: white;
+	background-color: 	hsla(181, 100%, 41%, 0.3);
 	font-weight: bolder;
 	font-style: italic;
+}
+
+.item {
+	height: 230px;
+	width: auto;
+}
+
+.book-cover {
+	height: 200px;
+	width: 150px;
+	display: inline-block;
+	float: left;
+}
+
+body > div.main > div > div:nth-child(2) {
+	padding: 10px 10px 10px 160px;
+	position: relative;
+}
+
+.author-portrait {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	float: left;
+}
+
+.insert-form {
+	text-align: center;
+	height: auto;
+}
+
+.insert-form > form > input {
+	width: 40%
+}
+
+.submit {
+	background-color: green;
+	border: 1px solid black;
+	color: white;
 }
