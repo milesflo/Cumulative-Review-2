@@ -1,0 +1,41 @@
+<div class="sidebar">
+	<% if (active == "books") {%>
+		<a href="/books">
+		<div class="books">
+			<img src="http://images.clipartpanda.com/book-20clip-20art-dT6okk8T9.png">
+			<div class="vertical-text">
+				<h5 class="active">
+					Books
+				</h5>
+			</div>
+		</div>
+		</a>
+		<a href="/authors">
+		<div class="authors">
+			<img src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg">
+			<div class="vertical-text">
+				<h5>Author</h5>
+			</div>
+		</div>
+		</a>
+	<% }  else if (active == "authors") {%>
+		<a href="/books">
+		<div class="books">
+			<img src="http://images.clipartpanda.com/book-20clip-20art-dT6okk8T9.png">
+			<div class="vertical-text">
+				<h5>
+					Books
+				</h5>
+			</div>
+		</div>
+		</a>
+		<a href="/authors" class="active">
+		<div class="authors">
+			<img src="http://www.clker.com/cliparts/5/9/4/c/12198090531909861341man%20silhouette.svg">
+			<div class="vertical-text">
+				<h5 class="active">Author</h5>
+			</div>
+		</div>
+		</a>
+	<% } %>	
+</div>
