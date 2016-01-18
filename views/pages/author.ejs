@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./../partials/head %>
+  </head>
+  <body>
+    <% include ./../partials/header.ejs %>
+    <% include ./../partials/sidebar.ejs %>
+    <div class="main"> 
+      <% authors.forEach(function(authors){ %>
+        <% if (authors.id == id) { %>
+        <div class="item">
+          <img class="author-portrait" src=<%= authors.portrait_url || "http://lorempixel.com/image_output/cats-q-c-640-480-3.jpg"%> >
+          <div>
+            <h3 class="author-name"><%= authors.first_name + " " + authors.last_name%></h3>
+            <p><%= authors.biography || "No Description Avalible" %> </p>
+          </div>
+        </div>
+      <% }}); %>
+    </div>
+  </body>
+</html>
