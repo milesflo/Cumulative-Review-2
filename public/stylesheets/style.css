@@ -21,6 +21,7 @@ body {
 	width: 49.6%;
 	display: inline-block;
 	border: 1px solid black;
+	float: left;
 }
 
 #right {
@@ -30,6 +31,7 @@ body {
 	width: 49.6%;
 	display: inline-block;
 	border: 1px solid black;
+	float: right;
 }
 
 h5 {
