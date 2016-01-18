@@ -19,6 +19,14 @@ router.post('/new', function(req, res, next) {
 		genre: genre,
 		cover_url: cover_url,
 		description: description
+	}).then(function() {
+		res.redirect('/books');
+	});
+});
+
+router.get('/delete/:id', function(req, res, next) {
+	knex('books').where('id', req.params.id).del().then(function() {
+		res.redirect('/books');
 	});
 });
 

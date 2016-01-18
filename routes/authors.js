@@ -21,7 +21,7 @@ router.post('/new', function(req, res, next) {
 		biography: req.body.bio
 	}).then(function() {
 		res.redirect('/authors');
-	})
+	});
 });
 
 router.get('/delete/:id', function(req, res, next) {

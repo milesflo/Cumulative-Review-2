@@ -125,6 +125,7 @@ body > div.main > div > div:nth-child(2) {
 
 .author-portrait {
 	width: 150px;
+	border-radius: 5px;
 	height: 150px;
 	display: inline-block;
 	float: left;
