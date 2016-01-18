@@ -145,3 +145,17 @@ body > div.main > div > div:nth-child(2) {
 	border: 1px solid black;
 	color: white;
 }
+
+.headline {
+	width: 60%;
+	margin: 0px;
+}
+
+.desc {
+	padding-left: 160px; 
+}
+
+.delete {
+	float:right;
+	display: inline-block;
+}

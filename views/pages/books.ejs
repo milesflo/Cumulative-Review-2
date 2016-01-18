@@ -7,11 +7,17 @@
   	<% include ./../partials/header.ejs %>
   	<% include ./../partials/sidebar.ejs %>
   	<div class="main"> 
+      <div>
+        <a href="./books/new"> <h3><u>Add a new Book Entry here</u></h3></a>  
+      </div>
   		<% books.forEach(function(books){ %>
   			<div class="item">
   					<a href="./<%= books.id %>"><img class="book-cover" src=<%= books.cover_url || "http://lorempixel.com/image_output/nature-q-g-640-480-10.jpg"%> > </a>
   				<div>
   					<a href="./books/<%= books.id %>"><h3 class="book-title"><%= books.title%></h3></a>
+          <div class="delete">
+            <a  href="./books/delete/<%= books.id %>"><button style="background-color: red">X</button></a>
+          </div>
   					<h4 class="book-author">By: <%= books.author_list || "Unknown"%></h4>
   					<h4><i>Genre: <%= books.genre || "Unknown"%></i></h4>
   					<p><%= books.description 

@@ -7,11 +7,21 @@
   	<% include ./../partials/header.ejs %>
   	<% include ./../partials/sidebar.ejs %>
   	<div class="main">
-  		<% authors.forEach(function(authors){ %>
+  		<div>
+        <a href="./authors/new"> <h3><u>Add a new Author Entry here</u></h3></a>  
+      </div>
+
+      <% authors.forEach(function(authors){ %>
         <div class="item">
           <img class="author-portrait" src=<%= authors.portrait_url || "http://ysmennewyork.com/Images/noImage.png"%> >
-          <div>
+          <div class="headline">
             <a href="./authors/<%= authors.id %>"><h3 class="author-name"><%= authors.first_name + " " + authors.last_name%></h3></a>
+          </div>
+          <div class="delete">
+            <a  href="./authors/delete/<%= authors.id %>"><button style="background-color: red">X</button></a>
+          </div>
+          
+          <div class="desc">
             <p><%= authors.biography
             || "No Description Avalible" %> </p>
           </div>
