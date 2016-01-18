@@ -38,6 +38,13 @@ h5 {
 	text-align: center;
 }
 
+header > h3 {
+	margin: 0;
+	font-weight: bolder;
+	color: orange;
+	font-size: 3rem;
+}
+
 header {
     padding: 6px;
     position:absolute;
