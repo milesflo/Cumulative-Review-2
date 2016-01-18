@@ -9,7 +9,7 @@
   	<div class="main">
   		<% authors.forEach(function(authors){ %>
         <div class="item">
-            <a href="./<%= authors.id %>"><img class="author-portrait" src=<%= authors.cover_url || "http://lorempixel.com/image_output/cats-q-c-640-480-3.jpg"%> > </a>
+          <img class="author-portrait" src=<%= authors.portrait_url || "http://lorempixel.com/image_output/cats-q-c-640-480-3.jpg"%> >
           <div>
             <a href="./authors/<%= authors.id %>"><h3 class="author-name"><%= authors.first_name + " " + authors.last_name%></h3></a>
             <p><%= authors.biography

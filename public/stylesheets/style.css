@@ -132,7 +132,7 @@ body > div.main > div > div:nth-child(2) {
 
 .insert-form {
 	text-align: center;
-	height: auto;
+	height: 100%;
 }
 
 .insert-form > form > input {

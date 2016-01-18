@@ -14,8 +14,11 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-	knex('books').then(function(books){
-		res.send("recieved post request", {active: "books", books: books});
+	knex('books').insert({
+		title: title,
+		genre: genre,
+		cover_url: cover_url,
+		description: description
 	});
 });
 
