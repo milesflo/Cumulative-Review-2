@@ -15,10 +15,10 @@ router.get('/new', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
 	knex('books').insert({
-		title: title,
-		genre: genre,
-		cover_url: cover_url,
-		description: description
+		title: req.body.title,
+		genre: req.body.genre,
+		cover_url: req.body.cover_url,
+		description: req.body.description
 	}).then(function() {
 		res.redirect('/books');
 	});
