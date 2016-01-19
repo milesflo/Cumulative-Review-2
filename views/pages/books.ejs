@@ -8,8 +8,11 @@
   	<% include ./../partials/sidebar.ejs %>
   	<div class="main"> 
       <div>
-        <a href="./books/new"> <h3><u>Add a new Book Entry here</u></h3></a>  
+        <a href="./books/new"> <button class="submit"><h3><u>Add a new Book Entry here</u></h3></button></a>  
       </div>
+
+      <br>
+
   		<% books.forEach(function(books){ %>
   			<div class="item">
   					<a href="./<%= books.id %>"><img class="book-cover" src=<%= books.cover_url || "http://lorempixel.com/image_output/nature-q-g-640-480-10.jpg"%> > </a>

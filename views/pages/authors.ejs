@@ -8,8 +8,10 @@
   	<% include ./../partials/sidebar.ejs %>
   	<div class="main">
   		<div>
-        <a href="./authors/new"> <h3><u>Add a new Author Entry here</u></h3></a>  
+        <a href="./authors/new"> <button class="submit"><h3><u>Add a new Author Entry here</u></h3></button></a>  
       </div>
+
+      <br>
 
       <% authors.forEach(function(authors){ %>
         <div class="item">
